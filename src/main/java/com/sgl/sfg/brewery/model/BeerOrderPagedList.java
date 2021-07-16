@@ -1,4 +1,4 @@
-package com.sgl.sfg.beer.order.service.web.model;
+package com.sgl.sfg.brewery.model;
 
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;

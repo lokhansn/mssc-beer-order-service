@@ -1,6 +1,6 @@
 package com.sgl.sfg.beer.order.service.services.beer;
 
-import com.sgl.sfg.beer.order.service.web.model.BeerDto;
+import com.sgl.sfg.brewery.model.BeerDto;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
@@ -12,8 +12,8 @@ import java.util.UUID;
 @ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = false)
 @Service
 public class BeerServiceImpl implements BeerService {
-    public final String BEER_PATH_V1 = "/api/v1/beer/";
-    public final String BEER_UPC_PATH_V1 = "/api/v1/beerUpc/";
+    public final static String BEER_PATH_V1 = "/api/v1/beer/";
+    public final static String BEER_UPC_PATH_V1 = "/api/v1/beerUpc/";
     private final RestTemplate restTemplate;
 
     private String beerServiceHost;

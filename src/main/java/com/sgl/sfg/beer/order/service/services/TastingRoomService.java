@@ -4,8 +4,8 @@ import com.sgl.sfg.beer.order.service.bootstrap.BeerOrderBootStrap;
 import com.sgl.sfg.beer.order.service.domain.Customer;
 import com.sgl.sfg.beer.order.service.repositories.BeerOrderRepository;
 import com.sgl.sfg.beer.order.service.repositories.CustomerRepository;
-import com.sgl.sfg.beer.order.service.web.model.BeerOrderDto;
-import com.sgl.sfg.beer.order.service.web.model.BeerOrderLineDto;
+import com.sgl.sfg.brewery.model.BeerOrderDto;
+import com.sgl.sfg.brewery.model.BeerOrderLineDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -46,6 +46,8 @@ public class TastingRoomService {
             doPlaceOrder(customerList.get(0));
         } else {
             log.error("Too many or too few tasting room customers found");
+
+            customerList.forEach(customer -> log.debug(customer.toString()));
         }
     }
 

@@ -1,7 +1,7 @@
 package com.sgl.sfg.beer.order.service.services;
 
-import com.sgl.sfg.beer.order.service.web.model.BeerOrderDto;
-import com.sgl.sfg.beer.order.service.web.model.BeerOrderPagedList;
+import com.sgl.sfg.brewery.model.BeerOrderDto;
+import com.sgl.sfg.brewery.model.BeerOrderPagedList;
 import org.springframework.data.domain.Pageable;
 
 import java.util.UUID;
